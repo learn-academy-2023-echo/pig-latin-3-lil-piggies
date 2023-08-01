@@ -37,6 +37,15 @@ const App = () => {
       if (eachWordLC[0] === "a" || eachWordLC[0] === "e" ||   eachWordLC[0] === "i" || eachWordLC[0] === "o" || eachWordLC[0] === "u") {
         eachWordLC = eachWordLC + "way"
       }
+      //Pseudo code: 
+      // input "quit"
+      // output: "itquay"
+      // process: if starts with 'qu' move to end of word and 'ay'
+
+      if (eachWordLC.substring(0, 2) === "qu") {
+        eachWordLC = eachWordLC.slice(2) + "quay"
+      }
+
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWordLC
     })
