@@ -46,6 +46,22 @@ const App = () => {
         eachWordLC = eachWordLC.slice(2) + "quay"
       }
 
+      //psuedo code:
+      // input: why, by, shy, spy
+      // output: ywhay, ybay, yshay, yspay
+      // process: if the vowel is 'y' we want to move the starting letter(s) to after the 'y' and add 'ay'
+      // vowel checker (a, e, i, o, u) 
+      // if none found then check for 'y'
+      // move letters before 'y' to back
+      // add 'ay' to end
+
+      
+      if (!eachWordLC.includes("a") && !eachWordLC.includes("e") && !eachWordLC.includes("i") && !eachWordLC.includes("o") && !eachWordLC.includes("u") && eachWordLC.includes("y")) { 
+        let indexOfY = eachWordLC.indexOf("y")
+        console.log(indexOfY)
+        eachWordLC = "y" + eachWordLC.substring(0, indexOfY) + "ay"
+      }
+
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWordLC
     })
