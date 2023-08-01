@@ -32,7 +32,12 @@ const App = () => {
       console.log("vowelsArray:", vowelsArray)
 
       // ACTION ITEM: your Pig Latin logic goes here!
-
+      
+      const startWithVowel = (arrayOfUserInput) => {
+        for (let i=0; i < arrayOfUserInput.length; i++){
+          let strTest = arrayOfUserInput[i]
+        }
+      }
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWord
     })
