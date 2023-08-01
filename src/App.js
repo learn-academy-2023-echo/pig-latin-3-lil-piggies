@@ -62,6 +62,28 @@ const App = () => {
         eachWordLC = "y" + eachWordLC.substring(0, indexOfY) + "ay"
       }
 
+      //Pseudo-code(eudopsay-odecay): eg.pencil = "encilpay" character = "aracterchay" scientist = "ientistscay" screw = "ewscray" 
+      //input: pencil character scientist screw
+      //output: encilpay aracterchay ientistscay ewscray
+      //Process: words with <=3 consonants at the beginning, we'll move the consonants to the end of the word, and add a "ay"!
+
+      // if (eachWordLC.includes)) {
+
+      // }
+
+      // let firstVowelIndex = 0
+      // for (let i=0; i<eachWordLC.length; i++) {
+      //   if (eachWordLC[i] === "a" || eachWordLC[i] === "e" || eachWordLC[i] === "i" || eachWordLC[i] === "o" || eachWordLC[i] === "u"){
+         
+      //     firstVowelIndex = i 
+      //     break
+      //   }
+      // }
+
+      // let startWord = eachWordLC.slice(0, firstVowelIndex)
+      // let endWord = eachWordLC.slice(firstVowelIndex)
+
+
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWordLC
     })

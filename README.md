@@ -117,3 +117,5 @@ TALKPOINTS!!!!!!!
 Struggled to comprehend existing code and already given us. Took some trial and error to figure out what we already had.
 
 Groupseudo code helped break out of our rut and understand more what we already had. 
+
+We then found our rhythm and 
