@@ -33,18 +33,72 @@ const App = () => {
 
       // ACTION ITEM: your Pig Latin logic goes here!
       // Pseudo code: If the word begins with a vowel, we want to add "way" to the end.
+
+      // turn eachWord into lowercase
       let eachWordLC = eachWord.toLowerCase() 
-      if (eachWordLC[0] === "a" || eachWordLC[0] === "e" ||   eachWordLC[0] === "i" || eachWordLC[0] === "o" || eachWordLC[0] === "u") {
-        eachWordLC = eachWordLC + "way"
+
+      // if (eachWordLC[0] === "a" || eachWordLC[0] === "e" || eachWordLC[0] === "i" || eachWordLC[0] === "o" || eachWordLC[0] === "u") {
+      //   eachWordLC = eachWordLC + "way"
+      // }
+      //#############################################################################################################################################
+      // condition to check if first character of word has a vowel
+      if (vowelsArray.includes(eachWordLC.charAt(0))){
+        //executes if true: reassign and return eachWordLC to append "way"
+        return eachWordLC = eachWordLC + "way"
+          
       }
+       
+      // condition to check if first 2 characters === qu
+      if(eachWordLC.substring(0, 2) === "qu" ){
+        //executes if true: return a string after "qu" and append "quay"
+        return eachWordLC = eachWordLC.slice(2) + "quay"
+
+      }
+      // if above conditions not met
+      // set a flag for no vowels
+      let hasVowel = false
+      //iterates through each characters
+      for (let i = 0; i < eachWordLC.length; i++) {
+      //checks if each characters has a vowel
+        if (vowelsArray.includes(eachWordLC[i])) {
+          //flag is now true and break out of loop and move on to next block of code
+          hasVowel = true
+          break;
+        }
+      }
+      //if word has no vowels AND there's a y
+      if (!hasVowel && eachWordLC.includes("y")) {
+        //find index of y
+        let indexOfY = eachWordLC.indexOf("y")
+        // add y to beginning of word up to y and append ay
+        return eachWordLC = "y" + eachWordLC.substring(0, indexOfY) + "ay"
+        
+      }
+      // if word has vowels (conditions checked and flagged to true at line 62 and 64)
+      if (hasVowel) {
+        // assign a first vowel index to 0 (doesn't matter what number since it will be changed)
+        let firstVowelIndex = 0
+        // iterates through each letter of the word
+        for (let i = 0; i < eachWordLC.length; i++) {
+          // condition to check location at i for vowel
+          if (vowelsArray.includes(eachWordLC[i])) {
+            // when vowel is found at index i, assign that index to firstVowelIndex and break out of for-loop
+            firstVowelIndex = i
+            break
+          }
+        }
+        // return all characters starting at firstVowelIndex + all characters from first index up to firstVowelIndex + ay
+        return eachWordLC.slice(firstVowelIndex) + eachWordLC.slice(0, firstVowelIndex) + "ay";
+      }
+      //################################################################################################################################################
       //Pseudo code: 
       // input "quit"
       // output: "itquay"
       // process: if starts with 'qu' move to end of word and 'ay'
 
-      if (eachWordLC.substring(0, 2) === "qu") {
-        eachWordLC = eachWordLC.slice(2) + "quay"
-      }
+      // if (eachWordLC.substring(0, 2) === "qu") {
+      //   eachWordLC = eachWordLC.slice(2) + "quay"
+      // }
 
       //psuedo code:
       // input: why, by, shy, spy
@@ -56,11 +110,11 @@ const App = () => {
       // add 'ay' to end
 
       
-      if (!eachWordLC.includes("a") && !eachWordLC.includes("e") && !eachWordLC.includes("i") && !eachWordLC.includes("o") && !eachWordLC.includes("u") && eachWordLC.includes("y")) { 
-        let indexOfY = eachWordLC.indexOf("y")
-        console.log(indexOfY)
-        eachWordLC = "y" + eachWordLC.substring(0, indexOfY) + "ay"
-      }
+      // if (!eachWordLC.includes("a") && !eachWordLC.includes("e") && !eachWordLC.includes("i") && !eachWordLC.includes("o") && !eachWordLC.includes("u") && eachWordLC.includes("y")) { 
+      //   let indexOfY = eachWordLC.indexOf("y")
+      //   console.log(indexOfY)
+      //   eachWordLC = "y" + eachWordLC.substring(0, indexOfY) + "ay"
+      // }
 
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
       return eachWordLC
@@ -115,7 +169,7 @@ const App = () => {
         </div>
         <p>{inputTranslated}</p>
       </div>
-      <footer>&copy; 2023 | Coded by: Your Names Here!</footer>
+      <footer>&copy; 2023 | Coded by: Bao, Megan, and Graham!</footer>
     </div>
   )
 }
