@@ -66,6 +66,7 @@ Oday ouyay eakspay igpay atinlay? If you are scratching your head at that statem
 - Can see the words that have a "qu" in the first syllable translated to Pig Latin and rendered to the page (e.g. ealsquay)
 
 **Story 3: In order to see English words converted to Pig Latin, as the user of the application, I need to see words that have no vowels other than "y" translated by moving all the consonant to the end and add "ay".**
+ 
 
 **Branch:** y-functionality
 
@@ -108,3 +109,13 @@ Each team will give a brief (3 minute) presentation of their application. Presen
 - First team member: What was your team's approach to solving this problem? Did the initial approach work out in the end?
 - Second team member: What was the hardest thing about this project? What is your biggest take away?
 - Third team member (if applicable): How did you manage the workflow in a group of three?
+
+
+
+TALKPOINTS!!!!!!!
+
+Struggled to comprehend existing code and already given us. Took some trial and error to figure out what we already had.
+
+Groupseudo code helped break out of our rut and understand more what we already had. 
+
+We then found our rhythm and 
