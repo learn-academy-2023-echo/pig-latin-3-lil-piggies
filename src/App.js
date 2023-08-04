@@ -32,9 +32,13 @@ const App = () => {
       console.log("vowelsArray:", vowelsArray)
 
       // ACTION ITEM: your Pig Latin logic goes here!
-
+      // Pseudo code: If the word begins with a vowel, we want to add "way" to the end.
+      let eachWordLC = eachWord.toLowerCase() 
+      if (eachWordLC[0] === "a" || eachWordLC[0] === "e" ||   eachWordLC[0] === "i" || eachWordLC[0] === "o" || eachWordLC[0] === "u") {
+        eachWordLC = eachWordLC + "way"
+      }
       // ACTION ITEM: this return will be the output of your Pig Latin'd code
-      return eachWord
+      return eachWordLC
     })
 
     // NO MODIFICATION NEEDED: once the code has been modified it gets joined from an array back to a string
